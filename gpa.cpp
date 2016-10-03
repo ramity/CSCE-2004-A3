@@ -15,7 +15,7 @@ int main ()
 
   while(!valid_selection)
   {
-    cout << "Enter the number of classes for the system" << endl;
+    cout << "Enter the number of classes for the system";
 
     getline(cin,courses);
 
