@@ -18,6 +18,7 @@ int main ()
     cout << "Enter the number of classes for the system";
 
     getline(cin,courses);
+    getline(cin,courses);
 
     if(courses.fail())
     {
