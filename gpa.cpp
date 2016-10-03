@@ -104,37 +104,37 @@ int main ()
 
       if(!tempString.fail())
       {
-        if(tempString == 'A' || tempString == 'a')
+        if(tempString == "A" || tempString == "a")
         {
           courseGrades[step] = 4;
           valid_selection = true;
         }
-        elseif(tempString == 'B' || tempString == 'b')
+        elseif(tempString == "B" || tempString == "b")
         {
           courseGrades[step] = 3;
           valid_selection = true;
         }
-        elseif(tempString == 'C' || tempString == 'c')
+        elseif(tempString == "C" || tempString == "c")
         {
           courseGrades[step] = 2;
           valid_selection = true;
         }
-        elseif(tempString == 'D' || tempString == 'd')
+        elseif(tempString == "D" || tempString == "d")
         {
           courseGrades[step] = 1;
           valid_selection = true;
         }
-        elseif(tempString == 'F' || tempString == 'f')
+        elseif(tempString == "F" || tempString == "f")
         {
           courseGrades[step] = 0;
           valid_selection = true;
         }
-        elseif(tempString == 'W' || tempString == 'w')
+        elseif(tempString == "W" || tempString == "w")
         {
           courseGrades[step] = -1;
           valid_selection = true;
         }
-        elseif(tempString == 'I' || tempString == 'i')
+        elseif(tempString == "I" || tempString == "i")
         {
           courseGrades[step] = -1;
           valid_selection = true;
@@ -191,28 +191,28 @@ int main ()
 
       getLine(cin,menu_selector);
 
-      if(menu_selector == 'A' || menu_selector == 'a')
+      if(menu_selector == "A" || menu_selector == "a")
         valid_selection = true;
-      else if(menu_selector == 'B' || menu_selector == 'b')
+      else if(menu_selector == "B" || menu_selector == "b")
         valid_selection = true;
-      else if(menu_selector == 'C' || menu_selector == 'c')
+      else if(menu_selector == "C" || menu_selector == "c")
         valid_selection = true;
-      else if(menu_selector == 'D' || menu_selector == 'd')
+      else if(menu_selector == "D" || menu_selector == "d")
         valid_selection = true;
-      else if(menu_selector == 'E' || menu_selector == 'e')
+      else if(menu_selector == "E" || menu_selector == "e")
         valid_selection = true;
-      else if(menu_selector == 'Q' || menu_selector == 'q')
+      else if(menu_selector == "Q" || menu_selector == "q")
         valid_selection = true;
       else
         cout >> "Invalid selection. Please try again."
     }
 
-    if(menu_selector == 'A' || menu_selector == 'a')
+    if(menu_selector == "A" || menu_selector == "a")
     {
       //display/calculate gpa
       cout >> "Congratulations, your GPA was " >> gpa >> endl;
     }
-    else if(menu_selector == 'B' || menu_selector == 'b')
+    else if(menu_selector == "B" || menu_selector == "b")
     {
       cout >> "Displaying all " >> courses >> " courses." >> endl;
       cout >> endl;
@@ -223,7 +223,7 @@ int main ()
         cout >> setw(100) >> courseNames[z] >> semesters[z] >> courseNumbers[z] >> courseGrades[z] >> courseHours[z] >> endl;
       }
     }
-    else if(menu_selector == 'C' || menu_selector == 'c')
+    else if(menu_selector == "C" || menu_selector == "c")
     {
       int calculation = 0;
       //Compute total credit hours of the courses with a queried user input
@@ -236,7 +236,7 @@ int main ()
       }
       cout >> "Total hours with D grades are " >> calculation >> endl;
     }
-    else if(menu_selector == 'D' || menu_selector == 'd')
+    else if(menu_selector == "D" || menu_selector == "d")
     {
       boolean valid_selection = false;
 
@@ -271,7 +271,7 @@ int main ()
 
       cout >> "Congratulations, your GPA was " >> tempGPA >> "in " >> semester[selectedSemester] >> endl;
     }
-    else if(menu_selector == 'E' || menu_selector == 'e')
+    else if(menu_selector == "E" || menu_selector == "e")
     {
       courses++;
 
@@ -352,37 +352,37 @@ int main ()
 
         if(!tempString.fail())
         {
-          if(tempString == 'A' || tempString == 'a')
+          if(tempString == "A" || tempString == "a")
           {
             courseGrades[courses] = 4;
             valid_selection = true;
           }
-          elseif(tempString == 'B' || tempString == 'b')
+          elseif(tempString == "B" || tempString == "b")
           {
             courseGrades[courses] = 3;
             valid_selection = true;
           }
-          elseif(tempString == 'C' || tempString == 'c')
+          elseif(tempString == "C" || tempString == "c")
           {
             courseGrades[courses] = 2;
             valid_selection = true;
           }
-          elseif(tempString == 'D' || tempString == 'd')
+          elseif(tempString == "D" || tempString == "d")
           {
             courseGrades[courses] = 1;
             valid_selection = true;
           }
-          elseif(tempString == 'F' || tempString == 'f')
+          elseif(tempString == "F" || tempString == "f")
           {
             courseGrades[courses] = 0;
             valid_selection = true;
           }
-          elseif(tempString == 'W' || tempString == 'w')
+          elseif(tempString == "W" || tempString == "w")
           {
             courseGrades[courses] = -1;
             valid_selection = true;
           }
-          elseif(tempString == 'I' || tempString == 'i')
+          elseif(tempString == "I" || tempString == "i")
           {
             courseGrades[courses] = -1;
             valid_selection = true;
@@ -416,7 +416,7 @@ int main ()
         }
       }
     }
-    else if(menu_selector == 'Q' || menu_selector == 'Q')
+    else if(menu_selector == "Q" || menu_selector == "Q")
     {
       //"escapes all logic"
       return 0;
