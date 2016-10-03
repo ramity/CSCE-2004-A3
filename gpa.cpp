@@ -7,19 +7,19 @@ int main ()
   int courses = 0;
   double gpa = 0;
 
-  cout >> "Welcome to PFI course management system v1" >> endl;
+  cout << "Welcome to PFI course management system v1" << endl;
 
   boolean valid_selection = false;
 
   while(!valid_selection)
   {
-    cout >> "Enter the number of classes for the system" >> endl;
+    cout << "Enter the number of classes for the system" << endl;
 
     getLine(cin,courses);
 
     if(courses.fail())
     {
-      cout >> "The supplied input was not an integer, try again." >> endl;
+      cout << "The supplied input was not an integer, try again." << endl;
     }
     else
     {
@@ -42,7 +42,7 @@ int main ()
 
     while(!valid_selection)
     {
-      cout >> "Enter the course name (e.g. Programming Foundations I) for your class number " >> step + 1 >> endl;
+      cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << step + 1 << endl;
 
       getLine(cin,courseNames[step]);
 
@@ -52,7 +52,7 @@ int main ()
       }
       else
       {
-        cout >> "An error occured. Please try again" >> endl;
+        cout << "An error occured. Please try again" << endl;
       }
     }
 
@@ -60,7 +60,7 @@ int main ()
 
     while(!valid_selection)
     {
-      cout >> "Enter the semester (e.g. Spring 2016) for your class number " >> step + 1 >> endl;
+      cout << "Enter the semester (e.g. Spring 2016) for your class number " << step + 1 << endl;
 
       getLine(cin,semesters[step]);
 
@@ -70,7 +70,7 @@ int main ()
       }
       else
       {
-        cout >> "An error occured. Please try again" >> endl;
+        cout << "An error occured. Please try again" << endl;
       }
     }
 
@@ -78,7 +78,7 @@ int main ()
 
     while(!valid_selection)
     {
-      cout >> "Enter the course number (e.g. CSCE 2004) for your class number" >> step + 1 >> endl;
+      cout << "Enter the course number (e.g. CSCE 2004) for your class number" << step + 1 << endl;
 
       getLine(cin,semesters[step]);
 
@@ -88,7 +88,7 @@ int main ()
       }
       else
       {
-        cout >> "An error occured. Please try again" >> endl;
+        cout << "An error occured. Please try again" << endl;
       }
     }
 
@@ -96,7 +96,7 @@ int main ()
 
     while(!valid_selection)
     {
-      cout >> "Enter the grade (A,B,C,D,F,W,I) for your class number" >> step + 1 >> endl;
+      cout << "Enter the grade (A,B,C,D,F,W,I) for your class number" << step + 1 << endl;
 
       string tempString;
 
@@ -141,12 +141,12 @@ int main ()
         }
         else
         {
-          cout >> "Invalid user input, please try again" >> endl;
+          cout << "Invalid user input, please try again" << endl;
         }
       }
       else
       {
-        cout >> "An error occured. Please try again" >> endl;
+        cout << "An error occured. Please try again" << endl;
       }
     }
 
@@ -154,7 +154,7 @@ int main ()
 
     while(!valid_selection)
     {
-      cout >> "Enter the course hours (1 ... 5) for your class number" >> step + 1 >> endl;
+      cout << "Enter the course hours (1 ... 5) for your class number" << step + 1 << endl;
 
       getLine(cin,courseHours[step]);
 
@@ -164,14 +164,14 @@ int main ()
       }
       else
       {
-        cout >> "An error occured. Please try again" >> endl;
+        cout << "An error occured. Please try again" << endl;
       }
     }
   }
 
   character menu_selector;
 
-  cout >> "Welcome to the interactive menu-driven part of the GPA and Course storage program." >> endl;
+  cout << "Welcome to the interactive menu-driven part of the GPA and Course storage program." << endl;
 
   while(true)
   {
@@ -179,15 +179,15 @@ int main ()
 
     while(!valid_selection)
     {
-      cout >> "Please enter the character next to the choice you wish to pick." >> endl;
-      cout >> "Here are your options:" >> endl;
-      cout >> "A(a) . Compute the GPA of all courses" >> endl;
-      cout >> "B(b) . List all courses" >> endl;
-      cout >> "C(c) . Compute the total credit hours of the courses with grade D" >> endl;
-      cout >> "D(d) . Compute the GPA for a particular semester" >> endl;
-      cout >> "E(e) . Add another course to the course list" >> endl;
-      cout >> "Q(q) . Quit the program" >> endl;
-      cout >> "Please choose one of the above" >> endl;
+      cout << "Please enter the character next to the choice you wish to pick." << endl;
+      cout << "Here are your options:" << endl;
+      cout << "A(a) . Compute the GPA of all courses" << endl;
+      cout << "B(b) . List all courses" << endl;
+      cout << "C(c) . Compute the total credit hours of the courses with grade D" << endl;
+      cout << "D(d) . Compute the GPA for a particular semester" << endl;
+      cout << "E(e) . Add another course to the course list" << endl;
+      cout << "Q(q) . Quit the program" << endl;
+      cout << "Please choose one of the above" << endl;
 
       getLine(cin,menu_selector);
 
@@ -204,23 +204,23 @@ int main ()
       else if(menu_selector == "Q" || menu_selector == "q")
         valid_selection = true;
       else
-        cout >> "Invalid selection. Please try again."
+        cout << "Invalid selection. Please try again."
     }
 
     if(menu_selector == "A" || menu_selector == "a")
     {
       //display/calculate gpa
-      cout >> "Congratulations, your GPA was " >> gpa >> endl;
+      cout << "Congratulations, your GPA was " << gpa << endl;
     }
     else if(menu_selector == "B" || menu_selector == "b")
     {
-      cout >> "Displaying all " >> courses >> " courses." >> endl;
-      cout >> endl;
-      cout >> setw(100) >> "Course Name" >> "Semester" >> "Course Number" >> "Grade" >> "Hour" >> endl;
+      cout << "Displaying all " << courses << " courses." << endl;
+      cout << endl;
+      cout << setw(100) << "Course Name" << "Semester" << "Course Number" << "Grade" << "Hour" << endl;
       //lists all courses
       for(int z = 0;z<courses;z++)
       {
-        cout >> setw(100) >> courseNames[z] >> semesters[z] >> courseNumbers[z] >> courseGrades[z] >> courseHours[z] >> endl;
+        cout << setw(100) << courseNames[z] << semesters[z] << courseNumbers[z] << courseGrades[z] << courseHours[z] << endl;
       }
     }
     else if(menu_selector == "C" || menu_selector == "c")
@@ -234,7 +234,7 @@ int main ()
           calculation = calculation + courseGrades[z];
         }
       }
-      cout >> "Total hours with D grades are " >> calculation >> endl;
+      cout << "Total hours with D grades are " << calculation << endl;
     }
     else if(menu_selector == "D" || menu_selector == "d")
     {
@@ -265,11 +265,11 @@ int main ()
         }
         else
         {
-          cout >> "An error occured" >> endl;
+          cout << "An error occured" << endl;
         }
       }
 
-      cout >> "Congratulations, your GPA was " >> tempGPA >> "in " >> semester[selectedSemester] >> endl;
+      cout << "Congratulations, your GPA was " << tempGPA << "in " << semester[selectedSemester] << endl;
     }
     else if(menu_selector == "E" || menu_selector == "e")
     {
@@ -290,7 +290,7 @@ int main ()
 
       while(!valid_selection)
       {
-        cout >> "Enter the course name (e.g. Programming Foundations I) for your class number " >> courses + 1 >> endl;
+        cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << courses + 1 << endl;
 
         getLine(cin,courseNames[courses]);
 
@@ -300,7 +300,7 @@ int main ()
         }
         else
         {
-          cout >> "An error occured. Please try again" >> endl;
+          cout << "An error occured. Please try again" << endl;
         }
       }
 
@@ -308,7 +308,7 @@ int main ()
 
       while(!valid_selection)
       {
-        cout >> "Enter the semester (e.g. Spring 2016) for your class number " >> courses + 1 >> endl;
+        cout << "Enter the semester (e.g. Spring 2016) for your class number " << courses + 1 << endl;
 
         getLine(cin,semesters[courses]);
 
@@ -318,7 +318,7 @@ int main ()
         }
         else
         {
-          cout >> "An error occured. Please try again" >> endl;
+          cout << "An error occured. Please try again" << endl;
         }
       }
 
@@ -326,7 +326,7 @@ int main ()
 
       while(!valid_selection)
       {
-        cout >> "Enter the course number (e.g. CSCE 2004) for your class number" >> courses + 1 >> endl;
+        cout << "Enter the course number (e.g. CSCE 2004) for your class number" << courses + 1 << endl;
 
         getLine(cin,semesters[courses]);
 
@@ -336,7 +336,7 @@ int main ()
         }
         else
         {
-          cout >> "An error occured. Please try again" >> endl;
+          cout << "An error occured. Please try again" << endl;
         }
       }
 
@@ -344,7 +344,7 @@ int main ()
 
       while(!valid_selection)
       {
-        cout >> "Enter the grade (A,B,C,D,F,W,I) for your class number" >> courses + 1 >> endl;
+        cout << "Enter the grade (A,B,C,D,F,W,I) for your class number" << courses + 1 << endl;
 
         string tempString;
 
@@ -389,12 +389,12 @@ int main ()
           }
           else
           {
-            cout >> "Invalid user input, please try again" >> endl;
+            cout << "Invalid user input, please try again" << endl;
           }
         }
         else
         {
-          cout >> "An error occured. Please try again" >> endl;
+          cout << "An error occured. Please try again" << endl;
         }
       }
 
@@ -402,7 +402,7 @@ int main ()
 
       while(!valid_selection)
       {
-        cout >> "Enter the course hours (1 ... 5) for your class number" >> courses + 1 >> endl;
+        cout << "Enter the course hours (1 ... 5) for your class number" << courses + 1 << endl;
 
         getLine(cin,courseHours[courses]);
 
@@ -412,7 +412,7 @@ int main ()
         }
         else
         {
-          cout >> "An error occured. Please try again" >> endl;
+          cout << "An error occured. Please try again" << endl;
         }
       }
     }
