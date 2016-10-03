@@ -15,7 +15,7 @@ int main ()
   {
     cout << "Enter the number of classes for the system" << endl;
 
-    getLine(cin,courses);
+    getline(cin,courses);
 
     if(courses.fail())
     {
@@ -44,7 +44,7 @@ int main ()
     {
       cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << step + 1 << endl;
 
-      getLine(cin,courseNames[step]);
+      getline(cin,courseNames[step]);
 
       if(!courseNames[step].fail())
       {
@@ -62,7 +62,7 @@ int main ()
     {
       cout << "Enter the semester (e.g. Spring 2016) for your class number " << step + 1 << endl;
 
-      getLine(cin,semesters[step]);
+      getline(cin,semesters[step]);
 
       if(!semesters[step].fail())
       {
@@ -80,7 +80,7 @@ int main ()
     {
       cout << "Enter the course number (e.g. CSCE 2004) for your class number" << step + 1 << endl;
 
-      getLine(cin,semesters[step]);
+      getline(cin,semesters[step]);
 
       if(!semesters[step].fail())
       {
@@ -100,7 +100,7 @@ int main ()
 
       string tempString;
 
-      getLine(cin,tempString);
+      getline(cin,tempString);
 
       if(!tempString.fail())
       {
@@ -156,7 +156,7 @@ int main ()
     {
       cout << "Enter the course hours (1 ... 5) for your class number" << step + 1 << endl;
 
-      getLine(cin,courseHours[step]);
+      getline(cin,courseHours[step]);
 
       if(!courseHours[step].fail())
       {
@@ -189,7 +189,7 @@ int main ()
       cout << "Q(q) . Quit the program" << endl;
       cout << "Please choose one of the above" << endl;
 
-      getLine(cin,menu_selector);
+      getline(cin,menu_selector);
 
       if(menu_selector == "A" || menu_selector == "a")
         valid_selection = true;
@@ -243,7 +243,7 @@ int main ()
       while(!valid_selection)
       {
         string selectedSemester = "";
-        getLine(cin,selectedSemester);
+        getline(cin,selectedSemester);
 
         if(!selectedSemester.fail())
         {
@@ -292,7 +292,7 @@ int main ()
       {
         cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << courses + 1 << endl;
 
-        getLine(cin,courseNames[courses]);
+        getline(cin,courseNames[courses]);
 
         if(!courseNames[courses].fail())
         {
@@ -310,7 +310,7 @@ int main ()
       {
         cout << "Enter the semester (e.g. Spring 2016) for your class number " << courses + 1 << endl;
 
-        getLine(cin,semesters[courses]);
+        getline(cin,semesters[courses]);
 
         if(!semesters[courses].fail())
         {
@@ -328,7 +328,7 @@ int main ()
       {
         cout << "Enter the course number (e.g. CSCE 2004) for your class number" << courses + 1 << endl;
 
-        getLine(cin,semesters[courses]);
+        getline(cin,semesters[courses]);
 
         if(!semesters[courses].fail())
         {
@@ -348,7 +348,7 @@ int main ()
 
         string tempString;
 
-        getLine(cin,tempString);
+        getline(cin,tempString);
 
         if(!tempString.fail())
         {
@@ -404,7 +404,7 @@ int main ()
       {
         cout << "Enter the course hours (1 ... 5) for your class number" << courses + 1 << endl;
 
-        getLine(cin,courseHours[courses]);
+        getline(cin,courseHours[courses]);
 
         if(!courseHours[courses].fail())
         {
