@@ -8,6 +8,7 @@ int main ()
 {
   int courses = 0;
   double gpa = 0;
+  string tempString = "";
 
   cout << "Welcome to PFI course management system v1" << endl;
 
@@ -15,14 +16,13 @@ int main ()
 
   while(!valid_selection)
   {
-    cout << "Enter the number of classes for the system";
+    cout << "Enter the number of classes for the system" << endl;
 
-    getline(cin,courses);
-    getline(cin,courses);
+    cin >> courses;
 
-    if(courses.fail())
+    if(courses >= 0)
     {
-      cout << "The supplied input was not an integer, try again." << endl;
+      cout << "The supplied input was not a positive integer, try again." << endl;
     }
     else
     {
@@ -83,9 +83,9 @@ int main ()
     {
       cout << "Enter the course number (e.g. CSCE 2004) for your class number" << step + 1 << endl;
 
-      getline(cin,semesters[step]);
+      getline(cin,courseNumbers[step]);
 
-      if(!semesters[step].fail())
+      if(!courseNumbers[step].fail())
       {
         valid_selection = true;
       }
@@ -101,7 +101,7 @@ int main ()
     {
       cout << "Enter the grade (A,B,C,D,F,W,I) for your class number" << step + 1 << endl;
 
-      string tempString;
+      tempString = "";
 
       getline(cin,tempString);
 
@@ -159,7 +159,7 @@ int main ()
     {
       cout << "Enter the course hours (1 ... 5) for your class number" << step + 1 << endl;
 
-      getline(cin,courseHours[step]);
+      cin >> courseHours[step];
 
       if(!courseHours[step].fail())
       {
@@ -279,7 +279,6 @@ int main ()
       courses++;
 
       //Add another course to the course list
-      valid_selection = false;
 
       //initalizes all array vars based on defined validated input above
       string [courses] courseNames = courseNames;
@@ -290,6 +289,7 @@ int main ()
       double [courses] courseGrades = courseGrades;
       double [courses] courseHours = courseHours;
 
+      valid_selection = false;
 
       while(!valid_selection)
       {
@@ -331,9 +331,9 @@ int main ()
       {
         cout << "Enter the course number (e.g. CSCE 2004) for your class number" << courses + 1 << endl;
 
-        getline(cin,semesters[courses]);
+        getline(cin,courseNumbers[courses]);
 
-        if(!semesters[courses].fail())
+        if(!courseNumbers[courses].fail())
         {
           valid_selection = true;
         }
@@ -349,7 +349,7 @@ int main ()
       {
         cout << "Enter the grade (A,B,C,D,F,W,I) for your class number" << courses + 1 << endl;
 
-        string tempString;
+        tempString = "";
 
         getline(cin,tempString);
 
@@ -407,7 +407,7 @@ int main ()
       {
         cout << "Enter the course hours (1 ... 5) for your class number" << courses + 1 << endl;
 
-        getline(cin,courseHours[courses]);
+        cin >> courseHours[courses];
 
         if(!courseHours[courses].fail())
         {
