@@ -49,7 +49,7 @@ int main ()
 
       getline(cin,courseNames[step]);
 
-      if(!courseNames[step].fail())
+      if(courseNames[step])
       {
         valid_selection = true;
       }
@@ -67,7 +67,7 @@ int main ()
 
       getline(cin,semesters[step]);
 
-      if(!semesters[step].fail())
+      if(semesters[step])
       {
         valid_selection = true;
       }
@@ -85,7 +85,7 @@ int main ()
 
       getline(cin,courseNumbers[step]);
 
-      if(!courseNumbers[step].fail())
+      if(courseNumbers[step])
       {
         valid_selection = true;
       }
@@ -105,7 +105,7 @@ int main ()
 
       getline(cin,tempString);
 
-      if(!tempString.fail())
+      if(tempString)
       {
         if(tempString == "A" || tempString == "a")
         {
@@ -161,7 +161,7 @@ int main ()
 
       cin >> courseHours[step];
 
-      if(!courseHours[step].fail())
+      if(courseHours[step])
       {
         valid_selection = true;
       }
@@ -248,7 +248,7 @@ int main ()
         string selectedSemester = "";
         getline(cin,selectedSemester);
 
-        if(!selectedSemester.fail())
+        if(selectedSemester)
         {
           double tempGrades = 0;
           double tempClasses = 0;
@@ -297,7 +297,7 @@ int main ()
 
         getline(cin,courseNames[courses]);
 
-        if(!courseNames[courses].fail())
+        if(courseNames[courses])
         {
           valid_selection = true;
         }
@@ -315,7 +315,7 @@ int main ()
 
         getline(cin,semesters[courses]);
 
-        if(!semesters[courses].fail())
+        if(semesters[courses])
         {
           valid_selection = true;
         }
@@ -333,7 +333,7 @@ int main ()
 
         getline(cin,courseNumbers[courses]);
 
-        if(!courseNumbers[courses].fail())
+        if(courseNumbers[courses])
         {
           valid_selection = true;
         }
@@ -353,7 +353,7 @@ int main ()
 
         getline(cin,tempString);
 
-        if(!tempString.fail())
+        if(tempString)
         {
           if(tempString == "A" || tempString == "a")
           {
@@ -409,7 +409,7 @@ int main ()
 
         cin >> courseHours[courses];
 
-        if(!courseHours[courses].fail())
+        if(courseHours[courses])
         {
           valid_selection = true;
         }
