@@ -98,7 +98,7 @@ int main ()
     {
       cout >> "Enter the grade (A,B,C,D,F,W,I) for your class number" >> step + 1 >> endl;
 
-      string tempString = '';
+      string tempString;
 
       getLine(cin,tempString);
 
@@ -169,7 +169,7 @@ int main ()
     }
   }
 
-  character menu_selector = '';
+  character menu_selector;
 
   cout >> "Welcome to the interactive menu-driven part of the GPA and Course storage program." >> endl;
 
@@ -346,7 +346,7 @@ int main ()
       {
         cout >> "Enter the grade (A,B,C,D,F,W,I) for your class number" >> courses + 1 >> endl;
 
-        string tempString = '';
+        string tempString;
 
         getLine(cin,tempString);
 
