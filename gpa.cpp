@@ -9,7 +9,7 @@ int main ()
 
   cout << "Welcome to PFI course management system v1" << endl;
 
-  boolean valid_selection = false;
+  bool valid_selection = false;
 
   while(!valid_selection)
   {
@@ -38,7 +38,7 @@ int main ()
 
   for(int step = 0;step < courses;step++)
   {
-    boolean valid_selection = false;
+    bool valid_selection = false;
 
     while(!valid_selection)
     {
@@ -56,7 +56,7 @@ int main ()
       }
     }
 
-    boolean valid_selection = false;
+    bool valid_selection = false;
 
     while(!valid_selection)
     {
@@ -74,7 +74,7 @@ int main ()
       }
     }
 
-    boolean valid_selection = false;
+    bool valid_selection = false;
 
     while(!valid_selection)
     {
@@ -92,7 +92,7 @@ int main ()
       }
     }
 
-    boolean valid_selection = false;
+    bool valid_selection = false;
 
     while(!valid_selection)
     {
@@ -150,7 +150,7 @@ int main ()
       }
     }
 
-    boolean valid_selection = false;
+    bool valid_selection = false;
 
     while(!valid_selection)
     {
@@ -175,7 +175,7 @@ int main ()
 
   while(true)
   {
-    boolean valid_selection = false;
+    bool valid_selection = false;
 
     while(!valid_selection)
     {
@@ -238,7 +238,7 @@ int main ()
     }
     else if(menu_selector == "D" || menu_selector == "d")
     {
-      boolean valid_selection = false;
+      bool valid_selection = false;
 
       while(!valid_selection)
       {
@@ -276,7 +276,7 @@ int main ()
       courses++;
 
       //Add another course to the course list
-      boolean valid_selection = false;
+      bool valid_selection = false;
 
       //initalizes all array vars based on defined validated input above
       string [courses] courseNames = courseNames;
@@ -304,7 +304,7 @@ int main ()
         }
       }
 
-      boolean valid_selection = false;
+      bool valid_selection = false;
 
       while(!valid_selection)
       {
@@ -322,7 +322,7 @@ int main ()
         }
       }
 
-      boolean valid_selection = false;
+      bool valid_selection = false;
 
       while(!valid_selection)
       {
@@ -340,7 +340,7 @@ int main ()
         }
       }
 
-      boolean valid_selection = false;
+      bool valid_selection = false;
 
       while(!valid_selection)
       {
@@ -398,7 +398,7 @@ int main ()
         }
       }
 
-      boolean valid_selection = false;
+      bool valid_selection = false;
 
       while(!valid_selection)
       {
