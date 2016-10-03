@@ -31,13 +31,13 @@ int main ()
   }
 
   //initalizes all array vars based on defined validated input above
-  string [courses] courseNames;
-  string [courses] semesters;
-  string [courses] courseNumbers;
+  string courseNames[courses];
+  string semesters[courses];
+  string courseNumbers[courses];
   //stores as numerical equiv of letter grade for easier calculation
   //typecasted as doubles to allow for easier calculation
-  double [courses] courseGrades;
-  double [courses] courseHours;
+  double courseGrades[courses];
+  double courseHours[courses];
 
   for(int step = 0;step < courses;step++)
   {
@@ -281,13 +281,13 @@ int main ()
       //Add another course to the course list
 
       //initalizes all array vars based on defined validated input above
-      string [courses] courseNames = courseNames;
-      string [courses] semesters = semesters;
-      string [courses] courseNumbers = courseNumbers;
+      string courseNames[courses] = courseNames;
+      string semesters[courses] = semesters;
+      string courseNumbers[courses] = courseNumbers;
       //stores as numerical equiv of letter grade for easier calculation
       //typecasted as doubles to allow for easier calculation
-      double [courses] courseGrades = courseGrades;
-      double [courses] courseHours = courseHours;
+      double courseGrades[courses] = courseGrades;
+      double courseHours[courses] = courseHours;
 
       valid_selection = false;
 
