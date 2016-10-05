@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 #include <math.h>
+#include <iomanip>//needed for setw
 
 using namespace std;
 
 int main ()
 {
-  int const COURSE_MAX = 1024;
+  int const COURSE_MAX = 10;
   int courses = 0;
   double gpa = 0;
   string tempString = "";
@@ -174,7 +175,7 @@ int main ()
       else if(menu_selector == "Q" || menu_selector == "q")
         valid_selection = true;
       else
-        cout << "Invalid selection. Please try again."
+        cout << "Invalid selection. Please try again.";
     }
 
     if(menu_selector == "A" || menu_selector == "a")
@@ -245,136 +246,144 @@ int main ()
     {
       courses++;
 
-      //Add another course to the course list
-
-      valid_selection = false;
-
-      while(!valid_selection)
+      if(courses > COURSE_MAX)
       {
-        cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << courses + 1 << endl;
 
-        getline(cin,courseNames[courses]);
+        //Add another course to the course list
 
-        if(courseNames[courses] !== "")
+        valid_selection = false;
+
+        while(!valid_selection)
         {
-          valid_selection = true;
-        }
-        else
-        {
-          cout << "An error occured. Please try again" << endl;
-        }
-      }
+          cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << courses + 1 << endl;
 
-      valid_selection = false;
+          getline(cin,courseNames[courses]);
 
-      while(!valid_selection)
-      {
-        cout << "Enter the semester (e.g. Spring 2016) for your class number " << courses + 1 << endl;
-
-        getline(cin,semesters[courses]);
-
-        if(semesters[courses] !== "")
-        {
-          valid_selection = true;
-        }
-        else
-        {
-          cout << "An error occured. Please try again" << endl;
-        }
-      }
-
-      valid_selection = false;
-
-      while(!valid_selection)
-      {
-        cout << "Enter the course number (e.g. CSCE 2004) for your class number" << courses + 1 << endl;
-
-        getline(cin,courseNumbers[courses]);
-
-        if(courseNumbers[courses] !== "")
-        {
-          valid_selection = true;
-        }
-        else
-        {
-          cout << "An error occured. Please try again" << endl;
-        }
-      }
-
-      valid_selection = false;
-
-      while(!valid_selection)
-      {
-        cout << "Enter the grade (A,B,C,D,F,W,I) for your class number" << courses + 1 << endl;
-
-        tempString = "";
-
-        getline(cin,tempString);
-
-        if(tempString !== "")
-        {
-          if(tempString == "A" || tempString == "a")
+          if(courseNames[courses] !== "")
           {
-            courseGrades[courses] = 4;
-            valid_selection = true;
-          }
-          else if(tempString == "B" || tempString == "b")
-          {
-            courseGrades[courses] = 3;
-            valid_selection = true;
-          }
-          else if(tempString == "C" || tempString == "c")
-          {
-            courseGrades[courses] = 2;
-            valid_selection = true;
-          }
-          else if(tempString == "D" || tempString == "d")
-          {
-            courseGrades[courses] = 1;
-            valid_selection = true;
-          }
-          else if(tempString == "F" || tempString == "f")
-          {
-            courseGrades[courses] = 0;
-            valid_selection = true;
-          }
-          else if(tempString == "W" || tempString == "w")
-          {
-            courseGrades[courses] = -1;
-            valid_selection = true;
-          }
-          else if(tempString == "I" || tempString == "i")
-          {
-            courseGrades[courses] = -1;
             valid_selection = true;
           }
           else
           {
-            cout << "Invalid user input, please try again" << endl;
+            cout << "An error occured. Please try again" << endl;
           }
         }
-        else
+
+        valid_selection = false;
+
+        while(!valid_selection)
         {
-          cout << "An error occured. Please try again" << endl;
+          cout << "Enter the semester (e.g. Spring 2016) for your class number " << courses + 1 << endl;
+
+          getline(cin,semesters[courses]);
+
+          if(semesters[courses] !== "")
+          {
+            valid_selection = true;
+          }
+          else
+          {
+            cout << "An error occured. Please try again" << endl;
+          }
+        }
+
+        valid_selection = false;
+
+        while(!valid_selection)
+        {
+          cout << "Enter the course number (e.g. CSCE 2004) for your class number" << courses + 1 << endl;
+
+          getline(cin,courseNumbers[courses]);
+
+          if(courseNumbers[courses] !== "")
+          {
+            valid_selection = true;
+          }
+          else
+          {
+            cout << "An error occured. Please try again" << endl;
+          }
+        }
+
+        valid_selection = false;
+
+        while(!valid_selection)
+        {
+          cout << "Enter the grade (A,B,C,D,F,W,I) for your class number" << courses + 1 << endl;
+
+          tempString = "";
+
+          getline(cin,tempString);
+
+          if(tempString !== "")
+          {
+            if(tempString == "A" || tempString == "a")
+            {
+              courseGrades[courses] = 4;
+              valid_selection = true;
+            }
+            else if(tempString == "B" || tempString == "b")
+            {
+              courseGrades[courses] = 3;
+              valid_selection = true;
+            }
+            else if(tempString == "C" || tempString == "c")
+            {
+              courseGrades[courses] = 2;
+              valid_selection = true;
+            }
+            else if(tempString == "D" || tempString == "d")
+            {
+              courseGrades[courses] = 1;
+              valid_selection = true;
+            }
+            else if(tempString == "F" || tempString == "f")
+            {
+              courseGrades[courses] = 0;
+              valid_selection = true;
+            }
+            else if(tempString == "W" || tempString == "w")
+            {
+              courseGrades[courses] = -1;
+              valid_selection = true;
+            }
+            else if(tempString == "I" || tempString == "i")
+            {
+              courseGrades[courses] = -1;
+              valid_selection = true;
+            }
+            else
+            {
+              cout << "Invalid user input, please try again" << endl;
+            }
+          }
+          else
+          {
+            cout << "An error occured. Please try again" << endl;
+          }
+        }
+
+        valid_selection = false;
+
+        while(!valid_selection)
+        {
+          cout << "Enter the course hours (1 ... 5) for your class number" << courses + 1 << endl;
+
+          cin >> courseHours[courses];
+
+          if(courseHours[courses])
+          {
+            valid_selection = true;
+          }
+          else
+          {
+            cout << "An error occured. Please try again" << endl;
+          }
         }
       }
-
-      valid_selection = false;
-
-      while(!valid_selection)
+      else
       {
-        cout << "Enter the course hours (1 ... 5) for your class number" << courses + 1 << endl;
-
-        cin >> courseHours[courses];
-
-        if(courseHours[courses])
-        {
-          valid_selection = true;
-        }
-        else
-        {
-          cout << "An error occured. Please try again" << endl;
-        }
+        cout << "Unable to add more than 10 classes" << endl;
       }
     }
     else if(menu_selector == "Q" || menu_selector == "Q")
