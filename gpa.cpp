@@ -85,51 +85,45 @@ int main ()
 
       getline(cin,tempString);
 
-      if(tempString !== "")
+
+      if(tempString == "A" || tempString == "a")
       {
-        if(tempString == "A" || tempString == "a")
-        {
-          courseGrades[step] = 4;
-          valid_selection = true;
-        }
-        else if(tempString == "B" || tempString == "b")
-        {
-          courseGrades[step] = 3;
-          valid_selection = true;
-        }
-        else if(tempString == "C" || tempString == "c")
-        {
-          courseGrades[step] = 2;
-          valid_selection = true;
-        }
-        else if(tempString == "D" || tempString == "d")
-        {
-          courseGrades[step] = 1;
-          valid_selection = true;
-        }
-        else if(tempString == "F" || tempString == "f")
-        {
-          courseGrades[step] = 0;
-          valid_selection = true;
-        }
-        else if(tempString == "W" || tempString == "w")
-        {
-          courseGrades[step] = -1;
-          valid_selection = true;
-        }
-        else if(tempString == "I" || tempString == "i")
-        {
-          courseGrades[step] = -1;
-          valid_selection = true;
-        }
-        else
-        {
-          cout << "Invalid user input, please try again" << endl;
-        }
+        courseGrades[step] = 4;
+        valid_selection = true;
+      }
+      else if(tempString == "B" || tempString == "b")
+      {
+        courseGrades[step] = 3;
+        valid_selection = true;
+      }
+      else if(tempString == "C" || tempString == "c")
+      {
+        courseGrades[step] = 2;
+        valid_selection = true;
+      }
+      else if(tempString == "D" || tempString == "d")
+      {
+        courseGrades[step] = 1;
+        valid_selection = true;
+      }
+      else if(tempString == "F" || tempString == "f")
+      {
+        courseGrades[step] = 0;
+        valid_selection = true;
+      }
+      else if(tempString == "W" || tempString == "w")
+      {
+        courseGrades[step] = -1;
+        valid_selection = true;
+      }
+      else if(tempString == "I" || tempString == "i")
+      {
+        courseGrades[step] = -1;
+        valid_selection = true;
       }
       else
       {
-        cout << "An error occured. Please try again" << endl;
+        cout << "Invalid user input, please try again" << endl;
       }
     }
 
