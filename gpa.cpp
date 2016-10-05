@@ -212,10 +212,10 @@ int main ()
       valid_selection = false;
 
       double tempGPA = 0;
+      string selectedSemester = "";
 
       while(!valid_selection)
       {
-        string selectedSemester = "";
         getline(cin,selectedSemester);
 
         if(selectedSemester)
@@ -261,14 +261,7 @@ int main ()
 
           getline(cin,courseNames[courses]);
 
-          if(courseNames[courses] !== "")
-          {
-            valid_selection = true;
-          }
-          else
-          {
-            cout << "An error occured. Please try again" << endl;
-          }
+          valid_selection = true;
         }
 
         valid_selection = false;
@@ -279,14 +272,7 @@ int main ()
 
           getline(cin,semesters[courses]);
 
-          if(semesters[courses] !== "")
-          {
-            valid_selection = true;
-          }
-          else
-          {
-            cout << "An error occured. Please try again" << endl;
-          }
+          valid_selection = true;
         }
 
         valid_selection = false;
@@ -297,14 +283,7 @@ int main ()
 
           getline(cin,courseNumbers[courses]);
 
-          if(courseNumbers[courses] !== "")
-          {
-            valid_selection = true;
-          }
-          else
-          {
-            cout << "An error occured. Please try again" << endl;
-          }
+          lid_selection = true;
         }
 
         valid_selection = false;
@@ -317,51 +296,44 @@ int main ()
 
           getline(cin,tempString);
 
-          if(tempString !== "")
+          if(tempString == "A" || tempString == "a")
           {
-            if(tempString == "A" || tempString == "a")
-            {
-              courseGrades[courses] = 4;
-              valid_selection = true;
-            }
-            else if(tempString == "B" || tempString == "b")
-            {
-              courseGrades[courses] = 3;
-              valid_selection = true;
-            }
-            else if(tempString == "C" || tempString == "c")
-            {
-              courseGrades[courses] = 2;
-              valid_selection = true;
-            }
-            else if(tempString == "D" || tempString == "d")
-            {
-              courseGrades[courses] = 1;
-              valid_selection = true;
-            }
-            else if(tempString == "F" || tempString == "f")
-            {
-              courseGrades[courses] = 0;
-              valid_selection = true;
-            }
-            else if(tempString == "W" || tempString == "w")
-            {
-              courseGrades[courses] = -1;
-              valid_selection = true;
-            }
-            else if(tempString == "I" || tempString == "i")
-            {
-              courseGrades[courses] = -1;
-              valid_selection = true;
-            }
-            else
-            {
-              cout << "Invalid user input, please try again" << endl;
-            }
+            courseGrades[courses] = 4;
+            valid_selection = true;
+          }
+          else if(tempString == "B" || tempString == "b")
+          {
+            courseGrades[courses] = 3;
+            valid_selection = true;
+          }
+          else if(tempString == "C" || tempString == "c")
+          {
+            courseGrades[courses] = 2;
+            valid_selection = true;
+          }
+          else if(tempString == "D" || tempString == "d")
+          {
+            courseGrades[courses] = 1;
+            valid_selection = true;
+          }
+          else if(tempString == "F" || tempString == "f")
+          {
+            courseGrades[courses] = 0;
+            valid_selection = true;
+          }
+          else if(tempString == "W" || tempString == "w")
+          {
+            courseGrades[courses] = -1;
+            valid_selection = true;
+          }
+          else if(tempString == "I" || tempString == "i")
+          {
+            courseGrades[courses] = -1;
+            valid_selection = true;
           }
           else
           {
-            cout << "An error occured. Please try again" << endl;
+            cout << "Invalid user input, please try again" << endl;
           }
         }
 
