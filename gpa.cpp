@@ -211,6 +211,8 @@ int main ()
     {
       valid_selection = false;
 
+      double tempGPA = 0;
+
       while(!valid_selection)
       {
         string selectedSemester = "";
@@ -230,7 +232,7 @@ int main ()
             }
           }
 
-          double tempGPA = tempGrades / tempClasses;
+          tempGPA = tempGrades / tempClasses;
 
           valid_selection = true;
         }
