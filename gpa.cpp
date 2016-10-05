@@ -139,7 +139,7 @@ int main ()
     }
   }
 
-  char menu_selector;
+  string menu_selector;
 
   cout << "Welcome to the interactive menu-driven part of the GPA and Course storage program." << endl;
 
