@@ -228,6 +228,7 @@ int main ()
           {
             tempClasses++;
             tempGrades = tempGrades + (courseHours[z] * courseGrades[z]);
+            semesterIndex = z;
           }
         }
 
@@ -236,7 +237,7 @@ int main ()
         valid_selection = true;
       }
 
-      cout << "Congratulations, your GPA was " << tempGPA << "in " << semesters[selectedSemester] << endl;
+      cout << "Congratulations, your GPA was " << tempGPA << "in " << semesters[semesterIndex] << endl;
     }
     else if(menu_selector == "E" || menu_selector == "e")
     {
