@@ -31,13 +31,13 @@ int main ()
   }
 
   //initalizes all array vars based on defined validated input above
-  string courseNames = new string[courses];
-  string semesters = new string[courses];
-  string courseNumbers = new string[courses];
+  string courseNames[courses];
+  string semesters[courses];
+  string courseNumbers[courses];
   //stores as numerical equiv of letter grade for easier calculation
   //typecasted as doubles to allow for easier calculation
-  double courseGrades = new double[courses];
-  double courseHours = new double[courses];
+  double courseGrades[courses];
+  double courseHours[courses];
 
   for(int step = 0;step < courses;step++)
   {
@@ -279,11 +279,7 @@ int main ()
       courses++;
 
       //Add another course to the course list
-      delete [] courseNames;
-      delete [] semesters;
-      delete [] courseNames;
-      delete [] courseGrades;
-      delete [] courseHours;
+
       //initalizes all array vars based on defined validated input above
       string courseNames[courses] = courseNames;
       string semesters[courses] = semesters;
