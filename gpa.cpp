@@ -22,9 +22,13 @@ int main ()
 
     cin >> courses;
 
-    if(courses >= 0)
+    if(courses <= 0)
     {
-      cout << "The supplied input was not a positive integer, try again." << endl;
+      cout << "The supplied input was not a positive integer. Please try again." << endl;
+    }
+    else if(courses > COURSE_MAX)
+    {
+      cout << "The supplied input was larger than the determined max. Please try again." << endl;
     }
     else
     {
