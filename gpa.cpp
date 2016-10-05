@@ -213,33 +213,27 @@ int main ()
 
       double tempGPA = 0;
       string selectedSemester = "";
+      int semesterIndex;
 
       while(!valid_selection)
       {
         getline(cin,selectedSemester);
 
-        if(selectedSemester)
-        {
-          double tempGrades = 0;
-          double tempClasses = 0;
+        double tempGrades = 0;
+        double tempClasses = 0;
 
-          for(int z = 0; z<courses;z++)
+        for(int z = 0; z<courses;z++)
+        {
+          if(semesters[z] == selectedSemester)
           {
-            if(semesters[z] == selectedSemester)
-            {
-              tempClasses++;
-              tempGrades = tempGrades + (courseHours[z] * courseGrades[z]);
-            }
+            tempClasses++;
+            tempGrades = tempGrades + (courseHours[z] * courseGrades[z]);
           }
-
-          tempGPA = tempGrades / tempClasses;
-
-          valid_selection = true;
         }
-        else
-        {
-          cout << "An error occured" << endl;
-        }
+
+        tempGPA = tempGrades / tempClasses;
+
+        valid_selection = true;
       }
 
       cout << "Congratulations, your GPA was " << tempGPA << "in " << semesters[selectedSemester] << endl;
