@@ -37,8 +37,8 @@ int main ()
   string courseNumbers[COURSE_MAX] = "";
   //stores as numerical equiv of letter grade for easier calculation
   //typecasted as doubles to allow for easier calculation
-  double courseGrades[COURSE_MAX] = 0;
-  double courseHours[COURSE_MAX] = 0;
+  double courseGrades[COURSE_MAX] = { 0 };
+  double courseHours[COURSE_MAX] = { 0 };
 
   for(int step = 0;step < courses;step++)
   {
@@ -50,14 +50,7 @@ int main ()
 
       getline(cin,courseNames[step]);
 
-      if(courseNames[step] !== "")
-      {
-        valid_selection = true;
-      }
-      else
-      {
-        cout << "An error occured. Please try again" << endl;
-      }
+      valid_selection = true;
     }
 
     valid_selection = false;
@@ -68,14 +61,7 @@ int main ()
 
       getline(cin,semesters[step]);
 
-      if(semesters[step] !== "")
-      {
-        valid_selection = true;
-      }
-      else
-      {
-        cout << "An error occured. Please try again" << endl;
-      }
+      valid_selection = true;
     }
 
     valid_selection = false;
@@ -86,14 +72,7 @@ int main ()
 
       getline(cin,courseNumbers[step]);
 
-      if(courseNumbers[step] !== "")
-      {
-        valid_selection = true;
-      }
-      else
-      {
-        cout << "An error occured. Please try again" << endl;
-      }
+      valid_selection = true;
     }
 
     valid_selection = false;
@@ -162,14 +141,7 @@ int main ()
 
       cin >> courseHours[step];
 
-      if(courseHours[step])
-      {
-        valid_selection = true;
-      }
-      else
-      {
-        cout << "An error occured. Please try again" << endl;
-      }
+      valid_selection = true;
     }
   }
 
