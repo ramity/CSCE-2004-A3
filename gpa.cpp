@@ -6,6 +6,7 @@ using namespace std;
 
 int main ()
 {
+  int const COURSE_MAX = 1024;
   int courses = 0;
   double gpa = 0;
   string tempString = "";
@@ -31,13 +32,13 @@ int main ()
   }
 
   //initalizes all array vars based on defined validated input above
-  string courseNames[courses] = "";
-  string semesters[courses] = "";
-  string courseNumbers[courses] = "";
+  string courseNames[COURSE_MAX] = "";
+  string semesters[COURSE_MAX] = "";
+  string courseNumbers[COURSE_MAX] = "";
   //stores as numerical equiv of letter grade for easier calculation
   //typecasted as doubles to allow for easier calculation
-  double courseGrades[courses] = 0;
-  double courseHours[courses] = 0;
+  double courseGrades[COURSE_MAX] = 0;
+  double courseHours[COURSE_MAX] = 0;
 
   for(int step = 0;step < courses;step++)
   {
@@ -279,15 +280,6 @@ int main ()
       courses++;
 
       //Add another course to the course list
-
-      //initalizes all array vars based on defined validated input above
-      string courseNames[courses] = courseNames;
-      string semesters[courses] = semesters;
-      string courseNumbers[courses] = courseNumbers;
-      //stores as numerical equiv of letter grade for easier calculation
-      //typecasted as doubles to allow for easier calculation
-      double courseGrades[courses] = courseGrades;
-      double courseHours[courses] = courseHours;
 
       valid_selection = false;
 
