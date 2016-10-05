@@ -31,13 +31,13 @@ int main ()
   }
 
   //initalizes all array vars based on defined validated input above
-  string courseNames[courses];
-  string semesters[courses];
-  string courseNumbers[courses];
+  string courseNames = new string[courses];
+  string semesters = new string[courses];
+  string courseNumbers = new string[courses];
   //stores as numerical equiv of letter grade for easier calculation
   //typecasted as doubles to allow for easier calculation
-  double courseGrades[courses];
-  double courseHours[courses];
+  double courseGrades = new double[courses];
+  double courseHours = new double[courses];
 
   for(int step = 0;step < courses;step++)
   {
@@ -49,7 +49,7 @@ int main ()
 
       getline(cin,courseNames[step]);
 
-      if(courseNames[step])
+      if(courseNames[step] !== "")
       {
         valid_selection = true;
       }
@@ -67,7 +67,7 @@ int main ()
 
       getline(cin,semesters[step]);
 
-      if(semesters[step])
+      if(semesters[step] !== "")
       {
         valid_selection = true;
       }
@@ -85,7 +85,7 @@ int main ()
 
       getline(cin,courseNumbers[step]);
 
-      if(courseNumbers[step])
+      if(courseNumbers[step] !== "")
       {
         valid_selection = true;
       }
@@ -105,39 +105,39 @@ int main ()
 
       getline(cin,tempString);
 
-      if(tempString)
+      if(tempString !== "")
       {
         if(tempString == "A" || tempString == "a")
         {
           courseGrades[step] = 4;
           valid_selection = true;
         }
-        elseif(tempString == "B" || tempString == "b")
+        else if(tempString == "B" || tempString == "b")
         {
           courseGrades[step] = 3;
           valid_selection = true;
         }
-        elseif(tempString == "C" || tempString == "c")
+        else if(tempString == "C" || tempString == "c")
         {
           courseGrades[step] = 2;
           valid_selection = true;
         }
-        elseif(tempString == "D" || tempString == "d")
+        else if(tempString == "D" || tempString == "d")
         {
           courseGrades[step] = 1;
           valid_selection = true;
         }
-        elseif(tempString == "F" || tempString == "f")
+        else if(tempString == "F" || tempString == "f")
         {
           courseGrades[step] = 0;
           valid_selection = true;
         }
-        elseif(tempString == "W" || tempString == "w")
+        else if(tempString == "W" || tempString == "w")
         {
           courseGrades[step] = -1;
           valid_selection = true;
         }
-        elseif(tempString == "I" || tempString == "i")
+        else if(tempString == "I" || tempString == "i")
         {
           courseGrades[step] = -1;
           valid_selection = true;
@@ -157,7 +157,7 @@ int main ()
 
     while(!valid_selection)
     {
-      cout << "Enter the course hours (1 ... 5) for your class number" << step + 1 << endl;
+      cout << "Enter the course hours (1 ... 5) for your class number" << (step + 1) << endl;
 
       cin >> courseHours[step];
 
@@ -172,7 +172,7 @@ int main ()
     }
   }
 
-  character menu_selector;
+  char menu_selector;
 
   cout << "Welcome to the interactive menu-driven part of the GPA and Course storage program." << endl;
 
@@ -279,7 +279,11 @@ int main ()
       courses++;
 
       //Add another course to the course list
-
+      delete [] courseNames;
+      delete [] semesters;
+      delete [] courseNames;
+      delete [] courseGrades;
+      delete [] courseHours;
       //initalizes all array vars based on defined validated input above
       string courseNames[courses] = courseNames;
       string semesters[courses] = semesters;
@@ -297,7 +301,7 @@ int main ()
 
         getline(cin,courseNames[courses]);
 
-        if(courseNames[courses])
+        if(courseNames[courses] !== "")
         {
           valid_selection = true;
         }
@@ -315,7 +319,7 @@ int main ()
 
         getline(cin,semesters[courses]);
 
-        if(semesters[courses])
+        if(semesters[courses] !== "")
         {
           valid_selection = true;
         }
@@ -333,7 +337,7 @@ int main ()
 
         getline(cin,courseNumbers[courses]);
 
-        if(courseNumbers[courses])
+        if(courseNumbers[courses] !== "")
         {
           valid_selection = true;
         }
@@ -353,39 +357,39 @@ int main ()
 
         getline(cin,tempString);
 
-        if(tempString)
+        if(tempString !== "")
         {
           if(tempString == "A" || tempString == "a")
           {
             courseGrades[courses] = 4;
             valid_selection = true;
           }
-          elseif(tempString == "B" || tempString == "b")
+          else if(tempString == "B" || tempString == "b")
           {
             courseGrades[courses] = 3;
             valid_selection = true;
           }
-          elseif(tempString == "C" || tempString == "c")
+          else if(tempString == "C" || tempString == "c")
           {
             courseGrades[courses] = 2;
             valid_selection = true;
           }
-          elseif(tempString == "D" || tempString == "d")
+          else if(tempString == "D" || tempString == "d")
           {
             courseGrades[courses] = 1;
             valid_selection = true;
           }
-          elseif(tempString == "F" || tempString == "f")
+          else if(tempString == "F" || tempString == "f")
           {
             courseGrades[courses] = 0;
             valid_selection = true;
           }
-          elseif(tempString == "W" || tempString == "w")
+          else if(tempString == "W" || tempString == "w")
           {
             courseGrades[courses] = -1;
             valid_selection = true;
           }
-          elseif(tempString == "I" || tempString == "i")
+          else if(tempString == "I" || tempString == "i")
           {
             courseGrades[courses] = -1;
             valid_selection = true;
