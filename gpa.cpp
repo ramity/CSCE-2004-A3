@@ -31,13 +31,13 @@ int main ()
   }
 
   //initalizes all array vars based on defined validated input above
-  string courseNames[courses];
-  string semesters[courses];
-  string courseNumbers[courses];
+  string courseNames[courses] = "";
+  string semesters[courses] = "";
+  string courseNumbers[courses] = "";
   //stores as numerical equiv of letter grade for easier calculation
   //typecasted as doubles to allow for easier calculation
-  double courseGrades[courses];
-  double courseHours[courses];
+  double courseGrades[courses] = 0;
+  double courseHours[courses] = 0;
 
   for(int step = 0;step < courses;step++)
   {
