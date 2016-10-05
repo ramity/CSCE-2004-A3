@@ -242,7 +242,7 @@ int main ()
         }
       }
 
-      cout << "Congratulations, your GPA was " << tempGPA << "in " << semester[selectedSemester] << endl;
+      cout << "Congratulations, your GPA was " << tempGPA << "in " << semesters[selectedSemester] << endl;
     }
     else if(menu_selector == "E" || menu_selector == "e")
     {
@@ -283,7 +283,7 @@ int main ()
 
           getline(cin,courseNumbers[courses]);
 
-          lid_selection = true;
+          valid_selection = true;
         }
 
         valid_selection = false;
