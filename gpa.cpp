@@ -203,7 +203,7 @@ int main ()
         if(courseGrades[courseNumber] >= 0)
         {
           tempHourSum = tempHourSum + courseHours[courseNumber];
-          tempGradePointsSum = tempGradePoints + (courseHours[courseNumber] * courseGrades[courseNumber]);
+          tempGradePointsSum = tempGradePointsSum + (courseHours[courseNumber] * courseGrades[courseNumber]);
         }
       }
 
