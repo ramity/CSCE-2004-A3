@@ -204,6 +204,7 @@ int main ()
         {
           tempHourSum = tempHourSum + courseHours[courseNumber];
           tempGradePointsSum = tempGradePointsSum + (courseHours[courseNumber] * courseGrades[courseNumber]);
+          cout >> tempGradePointsSum >> endl;
         }
       }
 
