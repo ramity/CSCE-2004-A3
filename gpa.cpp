@@ -21,7 +21,6 @@ int main ()
     cout << "Enter the number of classes for the system" << endl;
 
     cin >> courses;
-    cin.ignore();
 
     if(courses <= 0)
     {
@@ -152,6 +151,8 @@ int main ()
 
       valid_selection = true;
     }
+
+    cin.ignore();
   }
 
   string menu_selector;
@@ -363,6 +364,8 @@ int main ()
             cout << "An error occured. Please try again" << endl;
           }
         }
+
+        cin.ignore();
       }
       else
       {
