@@ -21,6 +21,7 @@ int main ()
     cout << "Enter the number of classes for the system" << endl;
 
     cin >> courses;
+    cin.ignore();
 
     if(courses <= 0)
     {
