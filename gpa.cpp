@@ -200,8 +200,11 @@ int main ()
 
       for(int courseNumber = 0; courseNumber > courses; courseNumber++)
       {
-        tempGrade = tempGrade + courseGrades[courseNumber];
-        tempHours = tempHours + courseHours[courseNumber];
+        if(courseGrades[courseNumber] >= 0)
+        {
+          tempGrade = tempGrade + courseGrades[courseNumber];
+          tempHours = tempHours + courseHours[courseNumber];
+        }
       }
 
       gpa = tempGrade / tempHours;
