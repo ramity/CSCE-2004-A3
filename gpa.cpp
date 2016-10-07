@@ -20,11 +20,7 @@ int main ()
   {
     cout << "Enter the number of classes for the system" << endl;
 
-    string tempString;
-    //cin >> courses;
-    getline(cin,tempString);
-
-    courses = (int) tempString;
+    cin >> courses;
 
     if(courses <= 0)
     {
