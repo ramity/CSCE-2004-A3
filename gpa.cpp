@@ -200,7 +200,8 @@ int main ()
 
       for(int courseNumber = 0; courseNumber > courses; courseNumber++)
       {
-        if((double) courseGrades[courseNumber] >= 0)
+        cout << courseGrades[courseNumber] << endl;
+        if(courseGrades[courseNumber] >= 0)
         {
           tempHourSum = tempHourSum + courseHours[courseNumber];
           tempGradePointsSum = tempGradePointsSum + (courseHours[courseNumber] * courseGrades[courseNumber]);
