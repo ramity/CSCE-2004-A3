@@ -195,18 +195,28 @@ int main ()
 
     if(menu_selector == "A" || menu_selector == "a")
     {
+      double tempGrade = 0;
+      double tempHours = 0;
+
+      for(int courseNumber = 0; courseNumber > courses; courseNumber++)
+      {
+        tempGrade = tempGrade + courseGrades[courseNumber];
+        tempHours = tempHours + courseHours[courseNumber];
+      }
+
+      gpa = tempGrade / tempHours;
       //display/calculate gpa
       cout << "Congratulations, your GPA was " << gpa << endl;
     }
     else if(menu_selector == "B" || menu_selector == "b")
     {
-      cout << "Displaying all " << courses << " courses." << endl;
+      cout << "Displaying " << courses << "/" << courses << ") courses." << endl;
       cout << endl;
-      cout << setw(100) << "Course Name" << "Semester" << "Course Number" << "Grade" << "Hour" << endl;
+      cout << "Course Name" << setw(10) << "Semester" << setw(10) << "Course Number" << setw(10) << "Grade" << setw(10) << "Hour" << endl;
       //lists all courses
       for(int z = 0;z<courses;z++)
       {
-        cout << setw(100) << courseNames[z] << semesters[z] << courseNumbers[z] << courseGrades[z] << courseHours[z] << endl;
+        cout << setw(10) << courseNames[z] << setw(10) << semesters[z] << setw(10) << courseNumbers[z] << setw(10) << courseGrades[z] << setw(10) << courseHours[z] << endl;
       }
     }
     else if(menu_selector == "C" || menu_selector == "c")
