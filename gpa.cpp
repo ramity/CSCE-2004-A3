@@ -196,7 +196,7 @@ int main ()
     if(menu_selector == "A" || menu_selector == "a")
     {
       double tempHourSum = 0;
-      double tempGradePoints = 0;
+      double tempGradePointsSum = 0;
 
       for(int courseNumber = 0; courseNumber > courses; courseNumber++)
       {
