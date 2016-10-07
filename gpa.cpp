@@ -56,7 +56,6 @@ int main ()
       cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << step + 1 << endl;
 
       getline(cin,courseNames[step]);
-      getline(cin,courseNames[step]);
 
       if(courseNames[step] == "")
       {
