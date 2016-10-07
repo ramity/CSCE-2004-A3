@@ -195,19 +195,19 @@ int main ()
 
     if(menu_selector == "A" || menu_selector == "a")
     {
-      double tempGrade = 0;
-      double tempHours = 0;
+      double tempHourSum = 0;
+      double tempGradePoints = 0;
 
       for(int courseNumber = 0; courseNumber > courses; courseNumber++)
       {
         if(courseGrades[courseNumber] >= 0)
         {
-          tempGrade = tempGrade + courseGrades[courseNumber];
-          tempHours = tempHours + courseHours[courseNumber];
+          tempHourSum = tempHourSum + courseHours[courseNumber];
+          tempGradePointsSum = tempGradePoints + (courseHours[courseNumber] * courseGrades[courseNumber]);
         }
       }
 
-      gpa = tempGrade / tempHours;
+      gpa = tempGradePointsSum / tempHourSum;
       //display/calculate gpa
       cout << "Congratulations, your GPA was " << gpa << endl;
     }
