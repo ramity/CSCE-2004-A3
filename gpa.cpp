@@ -200,7 +200,7 @@ int main ()
 
       for(int courseNumber = 0; courseNumber > courses; courseNumber++)
       {
-        if(courseGrades[courseNumber] >= 0)
+        if((double) courseGrades[courseNumber] >= 0)
         {
           tempHourSum = tempHourSum + courseHours[courseNumber];
           tempGradePointsSum = tempGradePointsSum + (courseHours[courseNumber] * courseGrades[courseNumber]);
