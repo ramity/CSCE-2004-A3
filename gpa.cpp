@@ -30,9 +30,9 @@ int main ()
     {
       cout << "The supplied input was not within specified bounds. Please try again." << endl;
     }
-  }
 
-  cin.ignore();
+    cin.ignore();
+  }
 
   //initalizes all array vars based on defined validated input above
   string courseNames[COURSE_MAX] = "";
