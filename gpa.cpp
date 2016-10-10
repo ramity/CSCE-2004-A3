@@ -24,6 +24,7 @@ int main ()
 
     if(cin.fail())
     {
+      courses = 0;
       cout << "The supplied input was not within specified bounds. Please try again." << endl;
     }
     else
@@ -37,8 +38,12 @@ int main ()
         cout << "The supplied input was not within specified bounds. Please try again." << endl;
       }
     }
+
+    cin.clear();
+    cin.ignore();
   }
 
+  cin.clear();
   cin.ignore();
 
   //initalizes all array vars based on defined validated input above
