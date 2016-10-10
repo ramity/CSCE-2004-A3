@@ -301,10 +301,9 @@ int main ()
     }
     else if(menu_selector == "E" || menu_selector == "e")
     {
-      courses++;
-
-      if(courses < COURSE_MAX)
+      if(courses + 1 < COURSE_MAX)
       {
+        courses++;
 
         //Add another course to the course list
 
@@ -312,7 +311,7 @@ int main ()
 
         while(!valid_selection)
         {
-          cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << courses + 1 << endl;
+          cout << "Enter the course name (e.g. Programming Foundations I) for your class number " << courses << endl;
 
           getline(cin,courseNames[courses]);
 
@@ -330,7 +329,7 @@ int main ()
 
         while(!valid_selection)
         {
-          cout << "Enter the semester (e.g. Spring 2016) for your class number " << courses + 1 << endl;
+          cout << "Enter the semester (e.g. Spring 2016) for your class number " << courses << endl;
 
           getline(cin,semesters[courses]);
 
@@ -348,7 +347,7 @@ int main ()
 
         while(!valid_selection)
         {
-          cout << "Enter the course number (e.g. CSCE 2004) for your class number" << courses + 1 << endl;
+          cout << "Enter the course number (e.g. CSCE 2004) for your class number" << courses << endl;
 
           getline(cin,courseNumbers[courses]);
 
@@ -366,7 +365,7 @@ int main ()
 
         while(!valid_selection)
         {
-          cout << "Enter the grade (A,B,C,D,F,W,I) for your class number" << courses + 1 << endl;
+          cout << "Enter the grade (A,B,C,D,F,W,I) for your class number" << courses << endl;
 
           tempString = "";
 
@@ -418,7 +417,7 @@ int main ()
 
         while(!valid_selection)
         {
-          cout << "Enter the course hours (1 ... 5) for your class number" << (courses + 1) << endl;
+          cout << "Enter the course hours (1 ... 5) for your class number" << (courses) << endl;
 
           cin >> courseHours[courses];
 
