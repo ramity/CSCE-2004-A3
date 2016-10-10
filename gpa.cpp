@@ -43,8 +43,6 @@ int main ()
     cin.ignore();
   }
 
-  cin.ignore();
-
   //initalizes all array vars based on defined validated input above
   string courseNames[COURSE_MAX] = "";
   string semesters[COURSE_MAX] = "";
