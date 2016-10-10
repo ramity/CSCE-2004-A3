@@ -316,7 +316,14 @@ int main ()
 
           getline(cin,courseNames[courses]);
 
-          valid_selection = true;
+          if(courseNames[courses] == "")
+          {
+            cout << "Invalid input. Please try again." << endl;
+          }
+          else
+          {
+            valid_selection = true;
+          }
         }
 
         valid_selection = false;
@@ -327,7 +334,14 @@ int main ()
 
           getline(cin,semesters[courses]);
 
-          valid_selection = true;
+          if(semesters[courses] == "")
+          {
+            cout << "Invalid input. Please try again." << endl;
+          }
+          else
+          {
+            valid_selection = true;
+          }
         }
 
         valid_selection = false;
@@ -338,7 +352,14 @@ int main ()
 
           getline(cin,courseNumbers[courses]);
 
-          valid_selection = true;
+          if(courseNumbers[courses] == "")
+          {
+            cout << "Invalid input. Please try again." << endl;
+          }
+          else
+          {
+            valid_selection = true;
+          }
         }
 
         valid_selection = false;
@@ -350,6 +371,7 @@ int main ()
           tempString = "";
 
           getline(cin,tempString);
+
 
           if(tempString == "A" || tempString == "a")
           {
@@ -396,17 +418,17 @@ int main ()
 
         while(!valid_selection)
         {
-          cout << "Enter the course hours (1 ... 5) for your class number" << courses + 1 << endl;
+          cout << "Enter the course hours (1 ... 5) for your class number" << (courses + 1) << endl;
 
           cin >> courseHours[courses];
 
-          if(courseHours[courses])
+          if(courseHours[courses] >= 1 && courseHours[courses] <= 5)
           {
             valid_selection = true;
           }
           else
           {
-            cout << "An error occured. Please try again" << endl;
+            cout << "Invalid user input, please try again." << endl;
           }
         }
 
