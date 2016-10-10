@@ -24,6 +24,10 @@ int main ()
 
     if(cin.fail())
     {
+      cout << "The supplied input was not within specified bounds. Please try again." << endl;
+    }
+    else
+    {
       if(courses >=1 && courses <= COURSE_MAX)
       {
         valid_selection = true;
@@ -32,10 +36,6 @@ int main ()
       {
         cout << "The supplied input was not within specified bounds. Please try again." << endl;
       }
-    }
-    else
-    {
-      cout << "The supplied input was not within specified bounds. Please try again." << endl;
     }
   }
 
