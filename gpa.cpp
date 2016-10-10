@@ -215,13 +215,13 @@ int main ()
     }
     else if(menu_selector == "B" || menu_selector == "b")
     {
-      cout << "Displaying " << courses << "/" << courses << ") courses." << endl;
+      cout << "Displaying (" << courses << "/" << courses << ") courses." << endl;
       cout << endl;
       cout << "Course Name" << setw(10) << "Semester" << setw(10) << "Course Number" << setw(10) << "Grade" << setw(10) << "Hour" << endl;
       //lists all courses
       for(int z = 0;z<courses;z++)
       {
-        cout << setw(10) << courseNames[z] << setw(10) << semesters[z] << setw(10) << courseNumbers[z] << setw(10) << courseGrades[z] << setw(10) << courseHours[z] << endl;
+        cout << courseNames[z] << setw(10) << semesters[z] << setw(10) << courseNumbers[z] << setw(10) << courseGrades[z] << setw(10) << courseHours[z] << endl;
       }
     }
     else if(menu_selector == "C" || menu_selector == "c")
@@ -247,6 +247,8 @@ int main ()
 
       while(!valid_selection)
       {
+        cout << "Please input desired semester for calculation" << endl;
+
         getline(cin,selectedSemester);
 
         double tempGrades = 0;
@@ -262,9 +264,16 @@ int main ()
           }
         }
 
-        tempGPA = tempGrades / tempClasses;
+        if(tempClasses === 0)
+        {
+          cout << "Desired semester: " << selectedSemester << " was not found. Please try again." << endl;
+        }
+        else
+        {
+          tempGPA = tempGrades / tempClasses;
 
-        valid_selection = true;
+          valid_selection = true;
+        }
       }
 
       cout << "Congratulations, your GPA was " << tempGPA << "in " << semesters[semesterIndex] << endl;
@@ -273,7 +282,7 @@ int main ()
     {
       courses++;
 
-      if(courses > COURSE_MAX)
+      if(courses < COURSE_MAX)
       {
 
         //Add another course to the course list
@@ -387,7 +396,7 @@ int main ()
         cout << "Unable to add more than 10 classes" << endl;
       }
     }
-    else if(menu_selector == "Q" || menu_selector == "Q")
+    else if(menu_selector == "Q" || menu_selector == "q")
     {
       //"escapes all logic"
       return 0;
