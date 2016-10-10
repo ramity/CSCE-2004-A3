@@ -22,17 +22,24 @@ int main ()
 
     cin >> courses;
 
-    if(courses >=1 && courses <= COURSE_MAX)
+    if(cin.fail())
     {
-      valid_selection = true;
+      if(courses >=1 && courses <= COURSE_MAX)
+      {
+        valid_selection = true;
+      }
+      else
+      {
+        cout << "The supplied input was not within specified bounds. Please try again." << endl;
+      }
     }
     else
     {
       cout << "The supplied input was not within specified bounds. Please try again." << endl;
     }
-
-    cin.ignore();
   }
+
+  cin.ignore();
 
   //initalizes all array vars based on defined validated input above
   string courseNames[COURSE_MAX] = "";
