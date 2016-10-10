@@ -75,7 +75,14 @@ int main ()
 
       getline(cin,semesters[step]);
 
-      valid_selection = true;
+      if(semesters[step] == "")
+      {
+        cout << "Invalid input. Please try again." << endl;
+      }
+      else
+      {
+        valid_selection = true;
+      }
     }
 
     valid_selection = false;
@@ -86,7 +93,14 @@ int main ()
 
       getline(cin,courseNumbers[step]);
 
-      valid_selection = true;
+      if(courseNumbers[step] == "")
+      {
+        cout << "Invalid input. Please try again." << endl;
+      }
+      else
+      {
+        valid_selection = true;
+      }
     }
 
     valid_selection = false;
@@ -149,7 +163,14 @@ int main ()
 
       cin >> courseHours[step];
 
-      valid_selection = true;
+      if(courseHours[step] >= 1 && courseHours[step] <= 5)
+      {
+        valid_selection = true;
+      }
+      else
+      {
+        cout << "Invalid user input, please try again." << endl;
+      }
     }
 
     cin.ignore();
