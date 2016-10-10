@@ -20,6 +20,9 @@ int main ()
   {
     cout << "Enter the number of classes for the system" << endl;
 
+    //prevents inf loop
+    courses = 0;
+
     cin >> courses;
 
     if(courses <= 0)
@@ -238,11 +241,11 @@ int main ()
     {
       cout << "Displaying (" << courses << "/" << courses << ") courses." << endl;
       cout << endl;
-      cout << "Course Name" << setw(10) << "Semester" << setw(10) << "Course Number" << setw(10) << "Grade" << setw(10) << "Hour" << endl;
+      cout << "Course Name" << setw(20) << "Semester" << setw(20) << "Course Number" << setw(20) << "Grade" << setw(20) << "Hour" << endl;
       //lists all courses
       for(int z = 0;z<courses;z++)
       {
-        cout << courseNames[z] << setw(10) << semesters[z] << setw(10) << courseNumbers[z] << setw(10) << courseGrades[z] << setw(10) << courseHours[z] << endl;
+        cout << courseNames[z] << setw(20) << semesters[z] << setw(20) << courseNumbers[z] << setw(20) << courseGrades[z] << setw(20) << courseHours[z] << endl;
       }
     }
     else if(menu_selector == "C" || menu_selector == "c")
