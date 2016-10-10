@@ -44,8 +44,8 @@ int main ()
   string courseNumbers[COURSE_MAX] = "";
   //stores as numerical equiv of letter grade for easier calculation
   //typecasted as doubles to allow for easier calculation
-  double courseGrades[COURSE_MAX];
-  double courseHours[COURSE_MAX];
+  double courseGrades[COURSE_MAX] = 0.0;
+  double courseHours[COURSE_MAX] = 0.0;
 
   for(int step = 0;step < courses;step++)
   {
