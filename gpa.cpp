@@ -25,6 +25,7 @@ int main ()
     if(courses >=1 && courses <= COURSE_MAX)
     {
       cout << "The supplied input was not a. Please try again." << endl;
+      cin.clear();
     }
     else
     {
