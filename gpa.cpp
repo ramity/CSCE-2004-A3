@@ -40,10 +40,8 @@ int main ()
     }
 
     cin.clear();
-    cin.ignore();
   }
 
-  cin.clear();
   cin.ignore();
 
   //initalizes all array vars based on defined validated input above
