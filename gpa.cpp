@@ -24,12 +24,11 @@ int main ()
 
     if(courses >=1 && courses <= COURSE_MAX)
     {
-      cout << "The supplied input was not a. Please try again." << endl;
-      cin.clear();
+      valid_selection = true;
     }
     else
     {
-      valid_selection = true;
+      cout << "The supplied input was not within specified bounds. Please try again." << endl;
     }
   }
 
