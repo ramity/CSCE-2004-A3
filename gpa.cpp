@@ -18,28 +18,21 @@ int main ()
 
   while(!valid_selection)
   {
-    cout << "Enter the number of classes for the system" << endl;
-
-    //prevents inf loop
-    courses = 0;
+    cout << "Enter the number of classes for the system [1," << COURSE_MAX << "]" << endl;
 
     cin >> courses;
 
-    cin.ignore();
-
-    if(courses <= 0)
+    if(courses >=1 && courses <= COURSE_MAX)
     {
-      cout << "The supplied input was not a positive integer. Please try again." << endl;
-    }
-    else if(courses > COURSE_MAX)
-    {
-      cout << "The supplied input was larger than the determined max. Please try again." << endl;
+      cout << "The supplied input was not a. Please try again." << endl;
     }
     else
     {
       valid_selection = true;
     }
   }
+
+  cin.ignore();
 
   //initalizes all array vars based on defined validated input above
   string courseNames[COURSE_MAX] = "";
