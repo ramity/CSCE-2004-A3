@@ -40,6 +40,7 @@ int main ()
     }
 
     cin.clear();
+    cin.ignore();
   }
 
   cin.ignore();
