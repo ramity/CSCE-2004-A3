@@ -264,7 +264,7 @@ int main ()
           }
         }
 
-        if(tempClasses === 0)
+        if(tempClasses == 0)
         {
           cout << "Desired semester: " << selectedSemester << " was not found. Please try again." << endl;
         }
