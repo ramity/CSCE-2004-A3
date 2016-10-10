@@ -25,6 +25,8 @@ int main ()
 
     cin >> courses;
 
+    cin.ignore();
+
     if(courses <= 0)
     {
       cout << "The supplied input was not a positive integer. Please try again." << endl;
@@ -38,8 +40,6 @@ int main ()
       valid_selection = true;
     }
   }
-
-  cin.ignore();
 
   //initalizes all array vars based on defined validated input above
   string courseNames[COURSE_MAX] = "";
