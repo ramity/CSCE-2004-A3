@@ -297,7 +297,7 @@ int main ()
 
           for(int courseNumber = 0; courseNumber < courses; courseNumber++)
           {
-            if(semester[courseNumber] == selectedSemester)
+            if(semesters[courseNumber] == selectedSemester)
             {
               tempGradePointsSum = tempGradePointsSum + (courseHours[courseNumber] * courseGrades[courseNumber]);
               tempCreditHoursSum = tempCreditHoursSum + courseHours[courseNumber];
