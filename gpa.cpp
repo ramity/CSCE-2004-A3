@@ -225,7 +225,7 @@ int main ()
       double tempGradePointsSum = 0;
       double tempCreditHoursSum = 0;
 
-      for(int courseNumber = 0; courseNumber > courses; courseNumber++)
+      for(int courseNumber = 0; courseNumber < courses; courseNumber++)
       {
         if(courseGrades[courseNumber] >= 0)
         {
