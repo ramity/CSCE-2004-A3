@@ -257,7 +257,7 @@ int main ()
       {
         if(courseGrades[z] == 1)
         {
-          calculation = calculation + courseGrades[z];
+          calculation = calculation + courseHours[z];
         }
       }
       cout << "Total hours with D grades are " << calculation << endl;
@@ -276,7 +276,6 @@ int main ()
 
         getline(cin,selectedSemester);
 
-        double tempGrades = 0;
         double tempClasses = 0;
 
         for(int z = 0; z<courses;z++)
@@ -284,8 +283,6 @@ int main ()
           if(semesters[z] == selectedSemester)
           {
             tempClasses++;
-            tempGrades = tempGrades + (courseHours[z] * courseGrades[z]);
-            semesterIndex = z;
           }
         }
 
@@ -295,13 +292,27 @@ int main ()
         }
         else
         {
+          double tempGradePointsSum = 0;
+          double tempCreditHoursSum = 0;
+
+          for(int courseNumber = 0; courseNumber < courses; courseNumber++)
+          {
+            if(semester[courseNumber] == selectedSemester)
+            {
+              tempGradePointsSum = tempGradePointsSum + (courseHours[courseNumber] * courseGrades[courseNumber]);
+              tempCreditHoursSum = tempCreditHoursSum + courseHours[courseNumber];
+            }
+          }
+
+          tempGPA = tempGradePointsSum / tempCreditHoursSum;
+
           tempGPA = tempGrades / tempClasses;
 
           valid_selection = true;
         }
       }
 
-      cout << "Congratulations, your GPA was " << tempGPA << "in " << semesters[semesterIndex] << endl;
+      cout << "Congratulations, your GPA was " << tempGPA << "in " << selectedSemester << endl;
     }
     else if(menu_selector == "E" || menu_selector == "e")
     {
