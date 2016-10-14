@@ -306,8 +306,6 @@ int main ()
 
           tempGPA = tempGradePointsSum / tempCreditHoursSum;
 
-          tempGPA = tempGrades / tempClasses;
-
           valid_selection = true;
         }
       }
