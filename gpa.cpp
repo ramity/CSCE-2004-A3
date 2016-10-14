@@ -25,6 +25,7 @@ int main ()
     if(cin.fail())
     {
       courses = 0;
+
       cout << "The supplied input was not within specified bounds. Please try again." << endl;
     }
     else
@@ -221,21 +222,19 @@ int main ()
 
     if(menu_selector == "A" || menu_selector == "a")
     {
-      double tempHourSum = 0;
       double tempGradePointsSum = 0;
+      double tempCreditHoursSum = 0;
 
       for(int courseNumber = 0; courseNumber > courses; courseNumber++)
       {
-        cout << courseGrades[courseNumber] << endl;
         if(courseGrades[courseNumber] >= 0)
         {
-          tempHourSum = tempHourSum + courseHours[courseNumber];
           tempGradePointsSum = tempGradePointsSum + (courseHours[courseNumber] * courseGrades[courseNumber]);
-          cout << tempGradePointsSum << endl;
+          tempCreditHoursSum = tempCreditHoursSum + courseHours[courseNumber];
         }
       }
 
-      gpa = tempGradePointsSum / tempHourSum;
+      gpa = tempGradePointsSum / tempCreditHoursSum;
       //display/calculate gpa
       cout << "Congratulations, your GPA was " << gpa << endl;
     }
