@@ -310,7 +310,7 @@ int main ()
         }
       }
 
-      cout << "Congratulations, your GPA was " << tempGPA << "in " << selectedSemester << endl;
+      cout << "Congratulations, your GPA was " << tempGPA << " in " << selectedSemester << endl;
     }
     else if(menu_selector == "E" || menu_selector == "e")
     {
